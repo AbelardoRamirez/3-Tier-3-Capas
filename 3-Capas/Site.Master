@@ -16,10 +16,10 @@
 	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 
-	<script src="Scripts/moment-with-locales.js"></script>
-	<script src="Scripts/sweetalert.min.js"></script>
-	<link href="Content/sweetalert.css" rel="stylesheet" />
-	<link href="Content/jquery.datetimepicker.css" rel="stylesheet" />
+	<script src="/Scripts/moment-with-locales.js"></script>
+	<script src="/Scripts/sweetalert.min.js"></script>
+	<link href="/Content/sweetalert.css" rel="stylesheet" />
+	<link href="/Content/jquery.datetimepicker.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -44,7 +44,7 @@
 				<%--Site Scripts--%>
 			</Scripts>
 		</asp:ScriptManager>
-		<script src="Scripts/jquery.datetimepicker.full.min.js"></script>
+		<script src="/Scripts/jquery.datetimepicker.full.min.js"></script>
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
@@ -69,6 +69,19 @@
 								<li><a href="/Catalogos/Camiones/ListaChoferes.aspx">Lista Choferes</a></li>
 							</ul>
 						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rutas
+							<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="/Ruta/AltaRuta.aspx">Alta Ruta</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/Ruta/EnProceso.aspx">Ruta en proceso</a></li>
+								<li><a href="/Ruta/Terminadas.aspx">Rutas Terminadas</a></li>
+							</ul>
+						</li>
+						<li><a runat="server" href="~/About.aspx">Acerca de</a></li>
+						<li><a runat="server" href="~/Contact.aspx">Contacto</a></li>
 					</ul>
 				</div>
 			</div>
