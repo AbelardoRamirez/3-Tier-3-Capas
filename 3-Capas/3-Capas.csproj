@@ -134,10 +134,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Imagenes\Camiones\" />
+    <Folder Include="Imagenes\Choferes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Catalogos\Camiones\AltaCamion.aspx" />
+    <Content Include="Catalogos\Camiones\EdicionCamion.aspx" />
+    <Content Include="Catalogos\Camiones\ListaCamiones.aspx" />
+    <Content Include="Catalogos\Choferes\AltaChofer.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -222,6 +226,27 @@
     </Compile>
     <Compile Include="Catalogos\Camiones\AltaCamion.aspx.designer.cs">
       <DependentUpon>AltaCamion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\EdicionCamion.aspx.cs">
+      <DependentUpon>EdicionCamion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\EdicionCamion.aspx.designer.cs">
+      <DependentUpon>EdicionCamion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\ListaCamiones.aspx.cs">
+      <DependentUpon>ListaCamiones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Camiones\ListaCamiones.aspx.designer.cs">
+      <DependentUpon>ListaCamiones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\Choferes\AltaChofer.aspx.cs">
+      <DependentUpon>AltaChofer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Choferes\AltaChofer.aspx.designer.cs">
+      <DependentUpon>AltaChofer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

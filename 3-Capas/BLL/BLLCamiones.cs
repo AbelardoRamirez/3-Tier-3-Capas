@@ -43,7 +43,7 @@ namespace _3_Capas.BLL
 				return ex.Message;
 			}
 		}
-		public static string UpdateCamion(int IdCamion, string Matricula, string TipoCamion, int Modelo, string Marca, int Capacidad, float Kilometraje, bool Disponibilidad, string UrlFoto)
+		public static string UpdCamion(int IdCamion, string Matricula, string TipoCamion, int Modelo, string Marca, int Capacidad, float Kilometraje, bool Disponibilidad, string UrlFoto)
 		{
 			try
 			{
@@ -52,7 +52,7 @@ namespace _3_Capas.BLL
 				bool Existe = false;
 				foreach (CamionVO item in LstUpCamiones)
 				{
-					if ((item.IdCamion != IdCamion) && (item.Matricula != Matricula))
+					if ((item.IdCamion != IdCamion) && (item.Matricula == Matricula))
 					{
 						Existe = true;
 					}
@@ -78,10 +78,10 @@ namespace _3_Capas.BLL
 			try
 			{
 				CamionVO camion = DALCamiones.GetCamionById(IdCamion);
-				if (camion.Disponiblidad)
+				if (camion.Disponibilidad)
 				{
 					DALCamiones.DelCamion(IdCamion);
-					return "Camion eliminado";
+					return "Camión Eliminado";
 				}
 				else
 				{

@@ -55,7 +55,7 @@ namespace _3_Capas.Catalogos.Camiones
 				string Resultado = BLLCamiones.InsCamion(Matricula, TipoCamion, Modelo, Marca, Capacidad, Kilometraje, urlFoto);
 				if (Resultado.IndexOf("Camión agregado") > -1)
 				{
-					Util.Library.UtilControls.SweetBoxConfirm("OK!", Resultado, "success", "ListaCamiones.aspx", this.Page, this.GetType());
+					Util.Library.UtilControls.SweetBoxConfirm("OK!", Resultado, "success", "/Catalogos/Camiones/ListaCamiones.aspx", this.Page, this.GetType());
 				}
 				else
 				{

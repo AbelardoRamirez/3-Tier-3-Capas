@@ -5,6 +5,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h3>Alta Camión</h3>
+				<hr />
 			</div>
 		</div>
 		<div class="row">
@@ -58,18 +59,14 @@
 
 				<div class="form-group">
 					<label for="">Seleccionar Foto</label>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="input-group">
-								<label class="input-group-btn">
-									<span class="btn btn-primary">Buscar
+					<div class="form-group">
+						<div class="input-group">
+							<label class="input-group-btn">
+								<span class="btn btn-primary">Buscar
 										<input type="file" id="SubeImagen" class="btn btn-file" style="display: none;" runat="server" />
-									</span>
-								</label>
-								<input type="text" id="InfoImg" readonly style="background-color: transparent; border: 0; margin-left: 10px;" />
-							</div>
-						</div>
-						<div class="col-md-6">
+								</span>
+							</label>
+							<input type="text" id="InfoImg" readonly style="background-color: transparent; border: 0; margin-left: 10px;" />
 							<asp:Button ID="btnSubImagen" CssClass="btn btn-primary btn-xs" Text="Subir" runat="server" OnClick="btnSubImagen_Click" OnClientClick="MuestraFoto();" />
 						</div>
 					</div>
@@ -86,6 +83,7 @@
 			<div class="col-md-6">
 				<asp:Button Text="Guardar" ID="btnGuardar" CssClass="btn btn-success block"
 					Visible="false" OnClick="btnGuardar_Click" runat="server" />
+				<a href="/Catalogos/Camiones/ListaCamiones" class="btn btn-info">Ver todos los camiones...</a>
 			</div>
 		</div>
 	</div>

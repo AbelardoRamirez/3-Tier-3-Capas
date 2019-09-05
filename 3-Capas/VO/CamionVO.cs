@@ -17,7 +17,7 @@ namespace _3_Capas.VO
 		private string _Marca;
 		private int _Capacidad;
 		private double _Kilometraje;
-		private bool _Disponiblidad;
+		private bool _Disponibilidad;
 		private string _UrlFoto;
 		#endregion
 
@@ -112,16 +112,16 @@ namespace _3_Capas.VO
 			}
 		}
 
-		public bool Disponiblidad
+		public bool Disponibilidad
 		{
 			get
 			{
-				return _Disponiblidad;
+				return _Disponibilidad;
 			}
 
 			set
 			{
-				_Disponiblidad = value;
+				_Disponibilidad = value;
 			}
 		}
 
@@ -150,7 +150,7 @@ namespace _3_Capas.VO
 			Marca = "";
 			Capacidad = 0;
 			Kilometraje = 0;
-			Disponiblidad = false;
+			Disponibilidad = false;
 			UrlFoto = "";
 		}
 		public CamionVO(DataRow dr)
@@ -162,7 +162,7 @@ namespace _3_Capas.VO
 			Marca = dr["Marca"].ToString();
 			Capacidad = int.Parse(dr["Capacidad"].ToString());
 			Kilometraje = double.Parse(dr["Kilometraje"].ToString());
-			Disponiblidad = bool.Parse(dr["Disponibilidad"].ToString());
+			Disponibilidad = bool.Parse(dr["Disponibilidad"].ToString());
 			UrlFoto = dr["UrlFoto"].ToString();
 		}
 		#endregion

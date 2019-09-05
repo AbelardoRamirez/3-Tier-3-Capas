@@ -6,134 +6,164 @@ using System.Web;
 
 namespace _3_Capas.VO
 {
-    public class ChoferVO
-    {
+	public class ChoferVO
+	{
 
-        #region Campos Privados
-        private int idChofer;
-        private string nombre;
-        private string telefono;
-        private int edad;
-        private string licencia;
-        private bool disponibilidad;
-        private string UrlFoto;
-        #endregion
+		#region Campos Privados
+		private int idChofer;
+		private string nombre;
+		private string appaterno;
+		private string apmaterno;
+		private string telefono;
+		private DateTime fechanacimiento;
+		private string licencia;
+		private bool disponibilidad;
+		private string UrlFoto;
+		#endregion
 
-        public ChoferVO()
-        {
-            IdChofer = 0;
-            Nombre = "";
-            Telefono = "";
-            Edad = 0;
-            Licencia = "";
-            Disponibilidad = false;
-            Urlfoto = "";
-        }
+		public ChoferVO()
+		{
+			IdChofer = 0;
+			Nombre = "";
+			ApPaterno = "";
+			ApMaterno = "";
+			Telefono = "";
+			FechaNacimiento = DateTime.MinValue;
+			Licencia = "";
+			Disponibilidad = false;
+			Urlfoto = "";
+		}
 
-        public ChoferVO(DataRow row)
-        {
-            IdChofer = int.Parse(row["IdChofer"].ToString().Trim());
-            Nombre = row["Nombre"].ToString().Trim();
-            Telefono = row["Telefono"].ToString().Trim();
-            Edad = int.Parse(row["Edad"].ToString().Trim());
-            Licencia = row["Licencia"].ToString().Trim();
-            Disponibilidad = bool.Parse(row["Disponibilidad"].ToString().Trim());
-            UrlFoto = row["Urlfoto"].ToString().Trim();
-        }
+		public ChoferVO(DataRow row)
+		{
+			IdChofer = int.Parse(row["IdChofer"].ToString().Trim());
+			Nombre = row["Nombre"].ToString().Trim();
+			ApPaterno = row["ApPaterno"].ToString().Trim();
+			ApMaterno = row["ApMaterno"].ToString().Trim();
+			Telefono = row["Telefono"].ToString().Trim();
+			FechaNacimiento = Convert.ToDateTime(row["FechaNacimiento"].ToString().Trim());
+			Licencia = row["Licencia"].ToString().Trim();
+			Disponibilidad = bool.Parse(row["Disponibilidad"].ToString().Trim());
+			UrlFoto = row["Urlfoto"].ToString().Trim();
+		}
 
-        #region Campos Publicos
-        public int IdChofer
-        {
-            get
-            {
-                return idChofer;
-            }
+		#region Campos Publicos
+		public int IdChofer
+		{
+			get
+			{
+				return idChofer;
+			}
 
-            set
-            {
-                idChofer = value;
-            }
-        }
+			set
+			{
+				idChofer = value;
+			}
+		}
 
-        public string Nombre
-        {
-            get
-            {
-                return nombre;
-            }
+		public string Nombre
+		{
+			get
+			{
+				return nombre;
+			}
 
-            set
-            {
-                nombre = value;
-            }
-        }
+			set
+			{
+				nombre = value;
+			}
+		}
 
-        public string Telefono
-        {
-            get
-            {
-                return telefono;
-            }
+		public string Telefono
+		{
+			get
+			{
+				return telefono;
+			}
 
-            set
-            {
-                telefono = value;
-            }
-        }
+			set
+			{
+				telefono = value;
+			}
+		}
 
-        public int Edad
-        {
-            get
-            {
-                return edad;
-            }
+		public DateTime FechaNacimiento
+		{
+			get
+			{
+				return fechanacimiento;
+			}
 
-            set
-            {
-                edad = value;
-            }
-        }
+			set
+			{
+				fechanacimiento = value;
+			}
+		}
 
-        public string Licencia
-        {
-            get
-            {
-                return licencia;
-            }
+		public string Licencia
+		{
+			get
+			{
+				return licencia;
+			}
 
-            set
-            {
-                licencia = value;
-            }
-        }
-        public string Urlfoto
-        {
-            get
-            {
-                return UrlFoto;
-            }
+			set
+			{
+				licencia = value;
+			}
+		}
+		public string Urlfoto
+		{
+			get
+			{
+				return UrlFoto;
+			}
 
-            set
-            {
-                UrlFoto = value;
-            }
-        }
-        public bool Disponibilidad
-        {
-            get
-            {
-                return disponibilidad;
-            }
+			set
+			{
+				UrlFoto = value;
+			}
+		}
+		public bool Disponibilidad
+		{
+			get
+			{
+				return disponibilidad;
+			}
 
-            set
-            {
-                disponibilidad = value;
-            }
-        }
+			set
+			{
+				disponibilidad = value;
+			}
+		}
 
+		public string ApPaterno
+		{
+			get
+			{
+				return appaterno;
+			}
 
-    }
-    #endregion
+			set
+			{
+				appaterno = value;
+			}
+		}
+
+		public string ApMaterno
+		{
+			get
+			{
+				return apmaterno;
+			}
+
+			set
+			{
+				apmaterno = value;
+			}
+		}
+	}
+	#endregion
 
 
 

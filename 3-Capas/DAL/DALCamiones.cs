@@ -164,8 +164,9 @@ namespace _3_Capas.DAL
 			string query = "LstCamiones";
 			SqlCommand cmd = new SqlCommand(query, con);
 			cmd.Connection = con;
-			SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 			cmd.CommandType = CommandType.StoredProcedure;
+
+			SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 			DataSet dsCamiones = new DataSet();
 
 			try
@@ -174,7 +175,6 @@ namespace _3_Capas.DAL
 				{
 					//encontro un registro
 					adapter.Fill(dsCamiones);
-
 				}
 				else
 				{
