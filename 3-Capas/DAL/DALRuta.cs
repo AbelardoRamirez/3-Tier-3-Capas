@@ -14,13 +14,13 @@ namespace _3_Capas.DAL
 			{
 				return
 					DBConnection.ExecuteNonQueryGetIdentity
-						("InsRutas", "@IdCamion", IdCamion,
+						("InsRuta", "@IdCamion", IdCamion,
 									"@IdChofer", IdChofer,
 									"@IdOrigen", IdOrigen,
 									"@IdDestino", IdDestino,
 									"@Distancia", Distancia,
 									"@FHSalida", FSalida,
-									"@FHLlegadaE", FLlegadaE);
+									"@FHLlegadaEstimada", FLlegadaE);
 			}
 			catch (Exception)
 			{

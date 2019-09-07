@@ -55,9 +55,8 @@ namespace _3_Capas.Ruta
 
 				//ToDo: DESCOMENTAR WS y Comentar int IdOrigenDestino = 1
 				////Instanciar nuestro servicio web
-				//WSCamiones.ServiceSoapClient WSDireccion = new WSCamiones.ServiceSoapClient();
-				//int IdOrigenDestino = WSDireccion.InsOrigenDestino(Calle, Numero, Colonia, Ciudad, Estado, CP);
-				int IdOrigenDestino = 1;
+				WSCamiones.serviceSoapClient WSDireccion = new WSCamiones.serviceSoapClient();
+				int IdOrigenDestino = WSDireccion.InsOriginDestino(Calle, Numero, Colonia, Ciudad, Estado, CP);
 
 
 
@@ -217,14 +216,13 @@ namespace _3_Capas.Ruta
 		{
 			//ToDo: Descomentar Referencia a WS
 			//Instanciamos el webservice para insertar cargamento
-			//WSCamiones.ServiceSoapClient WSCarga = new WSCamiones.ServiceSoapClient();
+			WSCamiones.serviceSoapClient WSCarga = new WSCamiones.serviceSoapClient();
 			foreach (GridViewRow item in GVCarga.Rows)
 			{
 				string Descripcion = item.Cells[0].Text;
 				double Peso = double.Parse(item.Cells[1].Text);
 				// ToDo: Descomentar Resultado y Comentar Resultado = ""
-				//string Resultado = WSCarga.InsertarCargamento(idRuta, Descripcion, Peso);
-				string Resultado = "";
+				string Resultado = WSCarga.InsCargamento(idRuta, Descripcion, Peso);
 
 			}
 		}
