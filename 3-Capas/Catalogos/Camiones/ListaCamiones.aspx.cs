@@ -1,11 +1,12 @@
-﻿using _3_Capas.BLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+
+using System.IO;
 using System.Web.UI.WebControls;
+using _3_Capas.BLL;
 
 namespace _3_Capas.Catalogos.Camiones
 {
@@ -131,9 +132,9 @@ namespace _3_Capas.Catalogos.Camiones
 			log.Write("\r\nLog Entry: ");
 			log.WriteLine("{0}-{1}", DateTime.Now.ToLongDateString(), DateTime.Now.ToLongDateString());
 			log.WriteLine(" : ");
-			log.WriteLine(" :{0}", args[0]);
-			log.WriteLine(" :{1}", args[1]);
-			log.WriteLine(" :{2}", args[2]);
+			log.WriteLine(" : {0}", args[0]);
+			log.WriteLine(" : {0}", args[1]);
+			log.WriteLine(" : {0}", args[2]);
 			log.WriteLine("----------------");
 			log.Close();
 		}

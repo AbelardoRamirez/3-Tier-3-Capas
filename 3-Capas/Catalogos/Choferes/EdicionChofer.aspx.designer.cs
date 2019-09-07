@@ -10,7 +10,16 @@
 namespace _3_Capas.Catalogos.Choferes {
     
     
-    public partial class AltaChofer {
+    public partial class EdicionChofer {
+        
+        /// <summary>
+        /// lblIdChofer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIdChofer;
         
         /// <summary>
         /// txtNombre control.

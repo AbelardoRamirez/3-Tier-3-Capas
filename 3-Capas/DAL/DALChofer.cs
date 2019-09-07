@@ -48,7 +48,7 @@ namespace _3_Capas
 			try
 			{
 				conn.Open();
-				string Query = "UpdCatChofer";
+				string Query = "UpdChofer";
 				SqlCommand cmd = new SqlCommand(Query, conn);
 				cmd.CommandType = CommandType.StoredProcedure;
 				cmd.Parameters.AddWithValue("@IdChofer", IdChofer);
@@ -73,16 +73,16 @@ namespace _3_Capas
 				conn.Close();
 			}
 		}
-		public static void DelCatChofer(int IdChofer)
+		public static void DelChofer(int IdChofer)
 		{
 			try
 			{
 				conn.Open();
-				string Query = "DelCatChofer";
+				string Query = "DelChofer";
 				SqlCommand cmd = new SqlCommand(Query, conn);
 				cmd.CommandType = CommandType.StoredProcedure;
 				cmd.Parameters.AddWithValue("@IdChofer", IdChofer);
-
+				cmd.ExecuteNonQuery();
 			}
 			catch (Exception)
 			{

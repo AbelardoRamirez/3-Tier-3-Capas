@@ -45,21 +45,21 @@ namespace _3_Capas.BLL
 				else
 				{
 					DALChofer.UpdChofer(IdChofer, nombre, appaterno, appaterno, telefono, fechanacimiento, licencia, UrlFoto, Disponibilidad);
-					return "Licencia agraga correctamente a chofer";
+					return "Chofer Actualizado";
 				}
 			}
 			catch (Exception ex) { return ex.Message; }
 		}
 
-		public static string DeleteCatChofer(int IdChofer)
+		public static string DelChofer(int IdChofer)
 		{
 			try
 			{
 				ChoferVO camion = DALChofer.GetChoferById(IdChofer);
 				if (camion.Disponibilidad)
 				{
-					DALChofer.DelCatChofer(IdChofer);
-					return "Chofer eliminado";
+					DALChofer.DelChofer(IdChofer);
+					return "Chofer Eliminado";
 				}
 				else return "El Chofer se encuentra en una ruta o no está disponible";
 			}
@@ -78,7 +78,7 @@ namespace _3_Capas.BLL
 			}
 		}//GetCamionById
 
-		public static List<ChoferVO> GetChofer(bool? Disponibilidad)
+		public static List<ChoferVO> GetChoferes(bool? Disponibilidad)
 		{
 			List<ChoferVO> LstChoferes = new List<ChoferVO>();
 			try

@@ -14,7 +14,7 @@ namespace _3_Capas
         Volvo,
         Ford,
         //en caso de que sea una palabra de mas de 1 se tiene que agregar esta despcripcion y lo que el usuario ve es mercedes
-        [Description("Mercedes benz")]Mercedes
+        [Description("Mercedes Benz")]Mercedes
     }
 
     public enum Tipo

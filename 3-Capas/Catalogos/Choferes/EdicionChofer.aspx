@@ -1,17 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AltaChofer.aspx.cs" Inherits="_3_Capas.Catalogos.Choferes.AltaChofer" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EdicionChofer.aspx.cs" Inherits="_3_Capas.Catalogos.Choferes.EdicionChofer" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolKit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 	<div class="container">
 		<div class="row">
-			<div class="col">
-				<h1>Alta Chofer</h1>
-				<hr />
+			<div class="col-md-12">
+				<h3>Editar Chofer:
+					<asp:Label ID="lblIdChofer" runat="server"></asp:Label></h3>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col">
+			<div class="col-md-12">
 				<div class="form-group">
 					<label for="<%= txtNombre.ClientID %>">Nombre</label>
 					<asp:TextBox ID="txtNombre" placeholder="Nombre" runat="server" CssClass="form-control" />
@@ -59,7 +59,7 @@
 								<input type="file" id="SubeImagen" class="btn btn-file" style="display: none;" runat="server" />
 							</label>
 							<input type="text" id="InfoImg" readonly style="background-color: transparent; border: 0; margin-left: 10px;" />
-							<asp:Button CssClass="btn btn-primary btn-xs" ID="btnCargarImagen" Text="Subir" runat="server" OnClick="btnCargarImagen_Click" OnClientClick="MostrarFoto();" />
+							<asp:Button CssClass="btn btn-primary btn-xs" ID="btnCargarImagen" Text="Subir" runat="server" OnClick="btnSubeImagen_Click" OnClientClick="MostrarFoto();" />
 						</div>
 					</div>
 				</div>
@@ -68,38 +68,38 @@
 					<asp:Image ID="imgFotoChofer" runat="server" Width="150px" />
 					<label id="UrlFoto" runat="server"></label>
 				</div>
-	</div>
-	</div>
+			</div>
+		</div>
+
 		<div class="row">
-			<div class="col">
-				<asp:Button CssClass="btn btn-success btn-block" ID="btnGuardar" Visible="false" Text="Guardar" runat="server" OnClick="btnGuardar_Click" />
+			<div class="col-md-6 col-md-offset-6">
+				<div class="form-group">
+					<asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click" />
+				</div>
 			</div>
 		</div>
 	</div>
-
 	<script>
-		$(function () {
-
-			if ($('#<%= UrlFoto.ClientID%>').html() != '') {
-				$('#imgFoto').show();
+		$(document).ready(function () {
+			if ($("#<%=UrlFoto.ClientID%>").html() != "") {
+				$("#imgFoto").show();
 			}
 
-			$('#<%= SubeImagen.ClientID %>').on('change', function () {
-				var label = $(this)[0].files["0"].name;
-				$('#InfoImg').val(label);
-			});
 
+			$("#<%=SubeImagen.ClientID%>").on('change', function () {
+				var label = $(this)["0"].files["0"].name;
+				$("#InfoImg").val(label);
+			});
 			$.datetimepicker.setLocale('es');//Declararlo en Español
 
 			$('#<%= inFechaNacimiento.ClientID%>').datetimepicker({//Asignamos el calendario a los input de fecha
 				format: 'd/m/y'
 			});
-
-		})
+		});
 	</script>
 	<script>
-		function MostrarFoto() {
-			$('#imgFoto').show();
+		function MuestraFoto() {
+			$("#imgFoto").show();
 			return true;
 		}
 	</script>

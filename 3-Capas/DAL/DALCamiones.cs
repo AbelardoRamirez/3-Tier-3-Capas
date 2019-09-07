@@ -30,7 +30,7 @@ namespace _3_Capas.DAL
 				cmd.Parameters.AddWithValue("@Matricula", Matricula);
 				cmd.Parameters.AddWithValue("@TipoCamion", TipoCamion);
 				cmd.Parameters.AddWithValue("@Modelo", Modelo);
-				cmd.Parameters.AddWithValue("@Marca", Matricula);
+				cmd.Parameters.AddWithValue("@Marca", Marca);
 				cmd.Parameters.AddWithValue("@Capacidad", Capacidad);
 
 				cmd.Parameters.AddWithValue("@kilometraje", Kilometraje);
@@ -51,7 +51,7 @@ namespace _3_Capas.DAL
 			}
 		}
 
-		public static void UpdCamion(int IdCamion, string Matricula, string TipoCamion, int Modelo, string Marca, int Capacidad, float Kilometraje, bool Disponibilidad, string UrlFoto)
+		public static void UpdCamion(int IdCamion, string Matricula, string TipoCamion, int? Modelo, string Marca, int? Capacidad, float? Kilometraje, bool? Disponibilidad, string UrlFoto)
 		{
 			try
 			{
@@ -66,7 +66,7 @@ namespace _3_Capas.DAL
 				cmd.Parameters.AddWithValue("@Matricula", Matricula);
 				cmd.Parameters.AddWithValue("@TipoCamion", TipoCamion);
 				cmd.Parameters.AddWithValue("@Modelo", Modelo);
-				cmd.Parameters.AddWithValue("@Marca", Matricula);
+				cmd.Parameters.AddWithValue("@Marca", Marca);
 				cmd.Parameters.AddWithValue("@Capacidad", Capacidad);
 
 				cmd.Parameters.AddWithValue("@kilometraje", Kilometraje);

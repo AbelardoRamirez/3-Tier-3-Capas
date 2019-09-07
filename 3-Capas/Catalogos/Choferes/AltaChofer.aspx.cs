@@ -61,7 +61,7 @@ namespace _3_Capas.Catalogos.Choferes
 				string ApPaterno = txtApPaterno.Text;
 				string ApMaterno = txtApMaterno.Text;
 				string Telefono = txtTelefono.Text;
-				DateTime FechaNacimiento = Convert.ToDateTime(txtFechaNacimiento.Text);
+				DateTime FechaNacimiento = DateTime.Parse(inFechaNacimiento.Value);
 				string Licencia = txtLicencia.Text;
 				string urlFoto = UrlFoto.InnerText;
 				string Resultado = BLL.BLLChofer.InsChofer(Nombre, ApPaterno, ApMaterno, Telefono, FechaNacimiento, Licencia, urlFoto);
