@@ -144,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="autocompletar.asmx" />
     <Content Include="Catalogos\Camiones\AltaCamion.aspx" />
     <Content Include="Catalogos\Camiones\EdicionCamion.aspx" />
     <Content Include="Catalogos\Camiones\ListaCamiones.aspx" />
@@ -242,6 +243,10 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="autocompletar.asmx.cs">
+      <DependentUpon>autocompletar.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="BLL\BLLCamiones.cs" />
     <Compile Include="BLL\BLLChofer.cs" />
     <Compile Include="BLL\BLLRuta.cs" />
